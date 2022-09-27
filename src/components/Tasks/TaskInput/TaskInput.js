@@ -32,7 +32,7 @@ import styles from "./TaskInput.module.css";
 //   }
 // `;
 
-const TaskInput = (props) => {
+const TaskInput = ({ onAddTask }) => {
   const [inputText, setInputText] = useState("");
   const [isInputValid, setIsInputValid] = useState(true);
 
@@ -49,7 +49,7 @@ const TaskInput = (props) => {
       setIsInputValid(false);
       return;
     }
-    props.onAddTask(inputText);
+    onAddTask(inputText);
   };
 
   return (

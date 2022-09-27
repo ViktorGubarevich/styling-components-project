@@ -27,10 +27,10 @@ import styles from "./Button.module.css";
 //   }
 // `;
 
-const Button = (props) => {
+const Button = ({ type, children }) => {
   return (
-    <button type={props.type} className={styles.button}>
-      {props.children}
+    <button type={type} className={styles.button}>
+      {children}
     </button>
   );
 };
